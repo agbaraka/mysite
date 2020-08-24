@@ -1,3 +1,12 @@
+- Name: Local Weather App
+  Type: PROJECT
+  Description: Weather forecast app for Tanzania major locations
+  Link: https://github.com/agbaraka/weather-app
+  Tags:
+    - NuxtJS
+    - Tailwind CSS
+    - GCP Build
+
 - Name: Link Previewer
   Type: LABS
   Description: Searches and generates previews for links found in the body of text
