@@ -1,3 +1,10 @@
+- Name: Goyave Framework
+  Type: Contributor
+  Description: 🍐 Elegant Golang REST API Framework
+  Link: https://github.com/go-goyave/goyave
+  Tags:
+    - Go
+
 - Name: Local Weather App
   Type: PROJECT
   Description: Weather forecast app for Tanzania major locations
