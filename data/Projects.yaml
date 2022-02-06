@@ -22,14 +22,6 @@
     - Go
     - Cloud Run
 
-- Name: URL Shortner
-  Type: LABS
-  Description: Generates and tracks shorter urls for any HTTP address
-  Link: https://url-shortner-dot-albertshirima.appspot.com/  
-  Tags:
-    - Go
-    - VueJS
-    - Firestore
 
 - Name: Email Integration
   Type: LABS
