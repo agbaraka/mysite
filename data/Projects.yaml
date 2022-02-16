@@ -5,6 +5,15 @@
   Tags:
     - Go
 
+- Name: URL Shortener
+  Type: LABS
+  Description: Generates and tracks shorter links
+  Link: https://url-shortener-yzirkvms4q-uc.a.run.app  
+  Tags:
+    - NodeJS
+    - VueJS
+    - Supabase
+
 - Name: Local Weather App
   Type: PROJECT
   Description: Weather forecast app for Tanzania major locations
