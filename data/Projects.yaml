@@ -1,3 +1,9 @@
+- Name: Personal Website
+  Type: Creator
+  Description: My Portfolio Website
+  Link: https://github.com/agbaraka/mysite
+  Tags: [Hugo,Github Actions, Firebase Hosting]
+
 - Name: Goyave Framework
   Type: Contributor
   Description: 🍐 Elegant Golang REST API Framework
