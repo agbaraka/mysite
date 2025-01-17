@@ -41,7 +41,7 @@
 - Name: Email Integration
   Type: LABS
   Description: Generates and sends email for services such as Newsletter
-  Link: https://send-mail-demo-as.firebaseapp.com/ 
+  Link: https://send-mail-demo-as.firebaseapp.com/
   Tags:
     - Go
     - Cloud Functions
