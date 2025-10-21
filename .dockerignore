@@ -1,0 +1,46 @@
+# Ignore Hugo output directory (if already generated locally)
+public/
+resources/
+.github/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore Git files
+.git/
+.gitignore
+.gitattributes
+
+# Ignore build and deployment scripts (if not needed in the container)
+scripts/
+
+# Ignore Node.js dependencies (if you use npm/yarn for Hugo themes)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ignore IDE/editor configuration files
+*.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Docker-specific files
+Dockerfile
+docker-compose.yml
+
+# Ignore backups
+*.bak
+*.old
+
+# Ignore miscellaneous files
+*.tar.gz
+*.zip
+*.backup
+*.log
