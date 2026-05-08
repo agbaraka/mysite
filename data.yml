@@ -1,0 +1,54 @@
+resource:
+  email: agbaraka@gmail.com
+  image: https://s.gravatar.com/avatar/aa5bf6a6c5d60c5b7eb2c94b989a9218?s=160
+  twitter: https://twitter.com/agbaraka
+  github: https://github.com/agbaraka/
+  linkedin: http://linkedin.com/in/albert-ambrose-a9359870
+
+projects:
+  - name: Personal Website
+    type: Creator
+    description: My Portfolio Website
+    link: https://github.com/agbaraka/mysite
+    tags: [Hugo, Github Actions, Firebase Hosting]
+
+  - name: Goyave Framework
+    type: Contributor
+    description: 🍐 Elegant Golang REST API Framework
+    link: https://github.com/go-goyave/goyave
+    tags:
+      - Go
+
+  - name: URL Shortener
+    type: LABS
+    description: Generates and tracks shorter links
+    link: https://url-shortener-yzirkvms4q-uc.a.run.app
+    tags:
+      - NodeJS
+      - VueJS
+      - Supabase
+
+  - name: Local Weather App
+    type: PROJECT
+    description: Weather forecast app for Tanzania major locations
+    link: https://github.com/agbaraka/weather-app
+    tags:
+      - NuxtJS
+      - Tailwind CSS
+      - GCP Build
+
+  - name: Link Previewer
+    type: LABS
+    description: Searches and generates previews for links found in the body of text
+    link: https://link-previewer-yzirkvms4q-uc.a.run.app/
+    tags:
+      - Go
+      - Cloud Run
+
+  - name: Email Integration
+    type: LABS
+    description: Generates and sends email for services such as Newsletter
+    link: https://send-mail-demo-as.firebaseapp.com/
+    tags:
+      - Go
+      - Cloud Functions

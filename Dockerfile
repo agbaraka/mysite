@@ -1,20 +1,24 @@
-# Stage 1: Build the Hugo site
-FROM hugomods/hugo as builder
+# Stage 1: Build
+FROM node:lts-alpine AS build
+WORKDIR /app
 
-WORKDIR /src
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
+# Copy dependency manifests first for better layer caching
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install --frozen-lockfile
+
+# Copy source files
 COPY . .
 
-RUN hugo --minify
+# Build static assets
+RUN pnpm build
 
-# Stage 2: Serve the site with Caddy
+# Stage 2: Serve
 FROM caddy:alpine
-
-# Copy the built site from the previous stage
-COPY --from=builder /src/public /srv
-
-# Expose port 80
+COPY --from=build /app/dist /srv
 EXPOSE 80
-
-# Start Caddy
-CMD ["caddy", "file-server", "--root", "/srv"]
+CMD ["caddy", "file-server", "--root", "/srv", "--listen", ":80"]

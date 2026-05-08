@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Configure your custom blue color */
+  --color-primary: #2b6cb0;
+
+  /* Configure Quicksand as the default sans font */
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+}
+
+
+
+html {
+  font-family: "Quicksand", serif;
+  -webkit-font-smoothing: antialiased;
+  /* Support for all WebKit browsers. */
+  text-rendering: optimizeLegibility;
+  /* Support for Safari and Chrome. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for Firefox. */
+  font-feature-settings: 'liga';
+  /* Support for IE. */
+}
+
+.item-container {
+  display: -webkit-box;
+  line-clamp: 2;
+  height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+}
