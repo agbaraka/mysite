@@ -143,7 +143,9 @@
 
       if (link.hash) {
         link.addEventListener('click', function (e) {
-          Jump(e.target.hash)
+          e.preventDefault()
+          history.pushState(null, '', link.hash)
+          Jump(link.hash)
         })
       }
     }
