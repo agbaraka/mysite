@@ -1,18 +1,17 @@
 # Vision
 
-mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a fast, static, single page that introduces Albert as a software developer, shows his skills and projects, and makes it easy to reach him. It also shows off his engineering practice: containerised self-hosting and browser-side OpenTelemetry.
+mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a fast, static, single page that introduces Albert as a software developer, shows his skills and projects, and makes it easy to reach him. It also shows off his engineering practice of containerised self-hosting.
 
 ## Goals
 - Finish the Hugo → Vite migration (`feat/migration`) and ship it to production via Docker + Caddy.
 - Keep all profile and project content in `data.yml`, so updating the portfolio never needs HTML changes (move the hard-coded skills list there too).
-- Land self-hosted observability: traces, metrics, logs and web-vitals exported to `otel.albertshirima.com`, without hurting page performance or privacy.
 - Keep the project list and skills current, and every link working.
 - Reduce runtime third-party dependencies (bundle particles.js / jump.js instead of loading them from a CDN).
 
 ## Target users
 - Recruiters and hiring managers: need a quick, credible summary of skills, experience and projects, plus a way to make contact.
 - Developers and collaborators: want links to real code (GitHub, contributions like Goyave) and live demos.
-- Albert himself: needs a site that's cheap and quick to update and that doubles as a playground for observability and deployment practice.
+- Albert himself: needs a site that's cheap and quick to update and that doubles as a playground for deployment practice.
 
 ## Principles
 - Small, focused changes, one concern per PR.
@@ -34,7 +33,6 @@ mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a f
 - No broken links or empty template bindings (every `{{ }}` key exists in `data.yml`).
 - No debug code, test buttons or console noise in production.
 - Lighthouse performance and accessibility stay ≥ 90 on mobile; images have alt text.
-- Telemetry failures (endpoint down, CORS) never break or slow the page.
 - CI is green before merge, once CI exists.
 
 ## Protected areas
