@@ -1,6 +1,4 @@
-# Ignore Hugo output directory (if already generated locally)
-public/
-resources/
+# Ignore CI configuration
 .github/
 
 # Ignore temporary files
@@ -16,7 +14,7 @@ resources/
 # Ignore build and deployment scripts (if not needed in the container)
 scripts/
 
-# Ignore Node.js dependencies (if you use npm/yarn for Hugo themes)
+# Ignore Node.js dependencies (installed fresh in the image)
 node_modules/
 package-lock.json
 yarn.lock
@@ -33,7 +31,7 @@ Thumbs.db
 
 # Ignore Docker-specific files
 Dockerfile
-docker-compose.yml
+docker-compose.yaml
 
 # Ignore backups
 *.bak
