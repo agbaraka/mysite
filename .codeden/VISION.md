@@ -1,11 +1,10 @@
 # Vision
 
-mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a fast, static, single page that introduces Albert as a software developer, shows his skills and projects, and makes it easy to reach him. It also shows off his engineering practice: containerised self-hosting and browser-side OpenTelemetry.
+mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a fast, static, single page that introduces Albert as a software developer, shows his skills and projects, and makes it easy to reach him. It also shows off his engineering practice of containerised self-hosting.
 
 ## Goals
 - Finish the Hugo → Vite migration (`feat/migration`) and ship it to production via Docker + Caddy.
 - Keep all profile and project content in `data.yml`, so updating the portfolio never needs HTML changes (move the hard-coded skills list there too).
-- Land self-hosted observability: traces, metrics, logs and web-vitals exported to `otel.albertshirima.com`, without hurting page performance or privacy.
 - Keep the project list and skills current, and every link working.
 - Reduce runtime third-party dependencies (bundle particles.js / jump.js instead of loading them from a CDN).
 
@@ -34,7 +33,6 @@ mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a f
 - No broken links or empty template bindings (every `{{ }}` key exists in `data.yml`).
 - No debug code, test buttons or console noise in production.
 - Lighthouse performance and accessibility stay ≥ 90 on mobile; images have alt text.
-- Telemetry failures (endpoint down, CORS) never break or slow the page.
 - CI is green before merge, once CI exists.
 
 ## Protected areas
