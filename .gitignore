@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# CodeDen: only the project vision is shared
+.codeden/*
+!.codeden/VISION.md
