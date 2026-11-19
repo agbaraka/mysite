@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --port 3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node scripts/check-links.mjs"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
