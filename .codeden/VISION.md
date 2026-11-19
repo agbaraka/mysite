@@ -18,7 +18,7 @@ mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a f
 - Static first: no backend, no SPA framework, no client-side routing.
 - Content is data: `data.yml` is the source of truth, and its schema stays stable (renames need a template update in the same PR).
 - Minimal dependencies. Prefer what Vite, Tailwind and plain JS already provide.
-- Telemetry is self-hosted and lean: no third-party trackers or ad/analytics SDKs.
+- No tracking: no third-party trackers or ad/analytics SDKs.
 
 ## Out of scope
 - Blog, CMS, comments or any server-side features.
