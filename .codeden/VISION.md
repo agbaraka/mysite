@@ -11,7 +11,7 @@ mysite is Albert Shirima's personal portfolio site (albertshirima.com). It's a f
 ## Target users
 - Recruiters and hiring managers: need a quick, credible summary of skills, experience and projects, plus a way to make contact.
 - Developers and collaborators: want links to real code (GitHub, contributions like Goyave) and live demos.
-- Albert himself: needs a site that's cheap and quick to update and that doubles as a playground for observability and deployment practice.
+- Albert himself: needs a site that's cheap and quick to update and that doubles as a playground for deployment practice.
 
 ## Principles
 - Small, focused changes, one concern per PR.
