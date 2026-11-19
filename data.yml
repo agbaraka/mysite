@@ -10,7 +10,7 @@ projects:
     type: Creator
     description: My Portfolio Website
     link: https://github.com/agbaraka/mysite
-    tags: [Hugo, Github Actions, Firebase Hosting]
+    tags: [Vite, Tailwind CSS, Docker, Caddy]
 
   - name: Goyave Framework
     type: Contributor
