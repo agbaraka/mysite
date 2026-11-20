@@ -24,6 +24,7 @@ html {
 
 .item-container {
   display: -webkit-box;
+  -webkit-line-clamp: 2;
   line-clamp: 2;
   height: 3rem;
   overflow: hidden;
