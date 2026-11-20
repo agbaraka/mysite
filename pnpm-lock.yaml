@@ -183,8 +183,8 @@ importers:
         version: 2.0.0
     devDependencies:
       '@rollup/plugin-yaml':
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: ^5.0.1
+        version: 5.0.1
       '@tailwindcss/vite':
         specifier: ^4.2.4
         version: 4.2.4(vite@8.0.11(jiti@2.7.0))
@@ -335,11 +335,11 @@ packages:
   '@rolldown/pluginutils@1.0.0-rc.18':
     resolution: {integrity: sha512-CUY5Mnhe64xQBGZEEXQ5WyZwsc1JU3vAZLIxtrsBt3LO6UOb+C8GunVKqe9sT8NeWb4lqSaoJtp2xo6GxT1MNw==}
 
-  '@rollup/plugin-yaml@4.1.2':
-    resolution: {integrity: sha512-RpupciIeZMUqhgFE97ba0s98mOFS7CWzN3EJNhJkqSv9XLlWYtwVdtE6cDw6ASOF/sZVFS7kRJXftaqM2Vakdw==}
+  '@rollup/plugin-yaml@5.0.1':
+    resolution: {integrity: sha512-oslHUtWi3Zepyx0IiZ3BBwc4PI1B1PUbkpBom+0w91UHuY0EVUIrGkrHfwW1reHzVOsTtkGj5z/Dx7jhguzP2g==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+      rollup: ^2.78.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -786,7 +786,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-rc.18': {}
 
-  '@rollup/plugin-yaml@4.1.2':
+  '@rollup/plugin-yaml@5.0.1':
     dependencies:
       '@rollup/pluginutils': 5.3.0
       js-yaml: 4.1.1
