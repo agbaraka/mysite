@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Use the pnpm pinned in package.json's "packageManager" when present;
+      # otherwise fall back to pnpm 12 (reads lockfileVersion 9.0).
+      - name: Resolve pnpm version
+        id: pnpm-version
+        run: |
+          if node -e 'process.exit(require("./package.json").packageManager ? 0 : 1)'; then
+            echo "version=" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=12" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: ${{ steps.pnpm-version.outputs.version }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
