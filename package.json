@@ -17,5 +17,9 @@
     "tailwindcss": "^4.2.4",
     "vite": "^8.0.10",
     "vite-plugin-handlebars": "^2.0.3"
+  },
+  "dependencies": {
+    "jump.js": "^1.0.2",
+    "particles.js": "^2.0.0"
   }
 }
