@@ -16,6 +16,12 @@ html {
   -moz-osx-font-smoothing: grayscale; /* Firefox on macOS */
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .item-container {
   display: -webkit-box;
   -webkit-line-clamp: 2;

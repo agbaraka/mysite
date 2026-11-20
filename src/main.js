@@ -1,6 +1,4 @@
 import 'particles.js';
-import jump from 'jump.js';
-import { initNav } from './nav.js';
 
 // particles.js defines Object.deepExtend with `arguments.callee`, which throws
 // a TypeError in strict mode (ES modules always run in strict mode).
@@ -15,8 +13,6 @@ Object.deepExtend = function deepExtend(destination, source) {
   }
   return destination;
 };
-
-initNav(jump);
 
 window.particlesJS({
   particles: {
