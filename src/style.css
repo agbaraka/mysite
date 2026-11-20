@@ -10,16 +10,10 @@
 
 
 
+/* Tailwind's preflight sets html's font-family from --font-sans. */
 html {
-  font-family: "Quicksand", serif;
-  -webkit-font-smoothing: antialiased;
-  /* Support for all WebKit browsers. */
-  text-rendering: optimizeLegibility;
-  /* Support for Safari and Chrome. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for Firefox. */
-  font-feature-settings: 'liga';
-  /* Support for IE. */
+  -webkit-font-smoothing: antialiased; /* WebKit browsers (Safari, Chrome) */
+  -moz-osx-font-smoothing: grayscale; /* Firefox on macOS */
 }
 
 .item-container {
@@ -28,9 +22,7 @@ html {
   line-clamp: 2;
   height: 3rem;
   overflow: hidden;
-  text-overflow: ellipsis;
   line-height: 1.5;
 
   -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
 }
