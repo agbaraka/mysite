@@ -2,8 +2,9 @@
 FROM node:lts-alpine AS build
 WORKDIR /app
 
-# Install pnpm (version pinned by "packageManager" in package.json)
-RUN corepack enable
+# Install pnpm (version pinned by "packageManager" in package.json).
+# Node 25+ no longer bundles corepack, so install a pinned copy first.
+RUN npm install -g corepack@0.36.0 && corepack enable
 
 # Copy dependency manifests first for better layer caching
 COPY package.json pnpm-lock.yaml ./
