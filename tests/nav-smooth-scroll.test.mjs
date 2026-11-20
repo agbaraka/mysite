@@ -1,6 +1,6 @@
 // Regression test for #8: nav links must prevent the browser's default
 // anchor jump so Jump.js can animate the scroll.
-// Run with: node --test tests/*.test.js
+// Run with: pnpm test
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
