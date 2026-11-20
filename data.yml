@@ -3,7 +3,7 @@ resource:
   image: https://s.gravatar.com/avatar/aa5bf6a6c5d60c5b7eb2c94b989a9218?s=160
   twitter: https://twitter.com/agbaraka
   github: https://github.com/agbaraka/
-  linkedin: http://linkedin.com/in/albert-ambrose-a9359870
+  linkedin: https://www.linkedin.com/in/albert-shirima
 
 projects:
   - name: Personal Website
