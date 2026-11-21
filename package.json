@@ -11,7 +11,7 @@
     "test": "node --test --test-concurrency=1 \"tests/**/*.test.mjs\""
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "^4.3.5",
     "js-yaml": "^4.1.1",
     "tailwindcss": "^4.2.4",
     "vite": "^8.0.10",
