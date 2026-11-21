@@ -15,15 +15,25 @@ before(() => {
 
 const anchors = () => [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
 
+// Text that assistive tech announces inside a link. Decorative SVGs and
+// aria-hidden subtrees are dropped first so hidden text (e.g. an icon's
+// <title>) cannot count as an accessible name.
+const accessibleText = (inner) =>
+    inner
+        .replace(/<svg\b[\s\S]*?<\/svg>/g, '')
+        .replace(/<([a-z][\w-]*)\b[^>]*\baria-hidden="true"[^>]*>[\s\S]*?<\/\1>/g, '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
 test('every link has text content or an aria-label', () => {
     const links = anchors();
     assert.ok(links.length > 0, 'expected links in dist/index.html');
 
     for (const [, attrs, inner] of links) {
         const ariaLabel = attrs.match(/\baria-label="([^"]*)"/)?.[1] ?? '';
-        const text = inner.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
         assert.ok(
-            text.length > 0 || ariaLabel.trim().length > 0,
+            accessibleText(inner).length > 0 || ariaLabel.trim().length > 0,
             `link has no accessible name: <a${attrs}>`,
         );
     }
@@ -42,7 +52,15 @@ for (const label of ['GitHub', 'LinkedIn', 'X']) {
 test('page exposes main, nav, and footer landmarks', () => {
     assert.match(html, /<main\b/, 'missing <main> landmark');
     assert.match(html, /<nav\b[^>]*aria-label="Main"/, 'missing <nav aria-label="Main"> landmark');
-    assert.match(html, /<footer\b/, 'missing <footer> landmark');
+
+    const footer = html.match(/<footer\b/);
+    assert.ok(footer, 'missing <footer> landmark');
+    // A <footer> nested inside <main> loses its contentinfo role, so require
+    // it to follow the closing </main>.
+    assert.ok(
+        html.indexOf('</main>') < footer.index,
+        '<footer> should follow </main> so it keeps its contentinfo role',
+    );
 });
 
 test('footer email is a mailto link that does not open a new tab', () => {
