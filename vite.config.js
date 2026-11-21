@@ -12,5 +12,14 @@ export default defineConfig({
                 return jsYaml.load(readFileSync('./data.yml', 'utf8'));
             },
         }),
+        {
+            name: 'reload-on-data-change',
+            configureServer(server) {
+                server.watcher.add('data.yml');
+                server.watcher.on('change', (file) => {
+                    if (file.endsWith('data.yml')) server.ws.send({ type: 'full-reload' });
+                });
+            },
+        },
     ],
 });
